@@ -1,27 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react"
+import { createClient } from "contentful"
+import MainComponent from "./components/MainComponent"
+import { Blog, Company, ContextObject, Testimonial } from "./types"
+import CompanyContext from "./context"
 
 function App() {
+  const [company, setCompany] = useState<ContextObject>({})
+
+  useEffect(() => {
+    const client = createClient({
+      space: process.env.REACT_APP_SPACE_ID as string,
+      accessToken: process.env.REACT_APP_ACCESS_TOKEN as string,
+    })
+
+    const entries = async () => {
+      const data = await client.getEntry<Company>(
+        process.env.REACT_APP_ENTRY_ID as string,
+        {
+          content_type: "company",
+          select: "fields",
+        }
+      )
+      return data
+    }
+
+    entries().then((data) => {
+      setCompany(data.fields)
+    })
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          
-        </a>
-      </header>
-    </div>
-  );
+    <CompanyContext.Provider value={company}>
+      <MainComponent />
+    </CompanyContext.Provider>
+  )
 }
 
-export default App;
+export default App
