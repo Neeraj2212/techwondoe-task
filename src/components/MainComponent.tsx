@@ -5,6 +5,7 @@ import NavBar from "./NavBar"
 import HeroComponent from "./HeroComponent"
 import ServicesComponent from "./ServicesComponent"
 import ClientsComponent from "./ClientsComponent"
+import WhyUsComponent from "./WhyUsComponent"
 
 function MainComponent() {
   const company = useContext(CompanyContext) as Company
@@ -14,6 +15,7 @@ function MainComponent() {
       <HeroComponent />
       <ServicesComponent />
       <ClientsComponent />
+      <WhyUsComponent />
     </div>
   )
 }

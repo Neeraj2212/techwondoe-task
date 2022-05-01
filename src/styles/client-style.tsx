@@ -9,6 +9,7 @@ const ClientStyles = styled("div")({
   marginTop: "100px",
   display: "flex",
   flexDirection: "column",
+  marginBottom: "100px",
 })
 
 export default ClientStyles
