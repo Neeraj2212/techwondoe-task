@@ -4,6 +4,7 @@ import { Company } from "types"
 import NavBar from "./NavBar"
 import HeroComponent from "./HeroComponent"
 import ServicesComponent from "./ServicesComponent"
+import ClientsComponent from "./ClientsComponent"
 
 function MainComponent() {
   const company = useContext(CompanyContext) as Company
@@ -12,6 +13,7 @@ function MainComponent() {
       <NavBar />
       <HeroComponent />
       <ServicesComponent />
+      <ClientsComponent />
     </div>
   )
 }

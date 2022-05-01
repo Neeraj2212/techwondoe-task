@@ -384,6 +384,16 @@ h3{
   font-family: NeueMachina,sans-serif;
 }
 
+h1 {
+    margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: NeueMachina,sans-serif;
+  color: #f7f7f7;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 300;
+}
+
 * {
   box-sizing: border-box;
 }

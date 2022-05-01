@@ -29,6 +29,7 @@ export interface Company  {
   ];
   Blogs: Entry<Blog>[];
   testimonials: Entry<Testimonial>[];
+  clients: Asset[];
 } 
 
 export type ContextObject = Company | {};
