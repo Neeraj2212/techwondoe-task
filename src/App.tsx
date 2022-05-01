@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { createClient } from "contentful"
+import { ThemeProvider } from "@mui/material/styles"
+import theme from "./theme"
 import MainComponent from "./components/MainComponent"
 import { Blog, Company, ContextObject, Testimonial } from "./types"
 import CompanyContext from "./context"
@@ -30,9 +32,11 @@ function App() {
   }, [])
 
   return (
-    <CompanyContext.Provider value={company}>
-      <MainComponent />
-    </CompanyContext.Provider>
+    <ThemeProvider theme={theme}>
+      <CompanyContext.Provider value={company}>
+        <MainComponent />
+      </CompanyContext.Provider>
+    </ThemeProvider>
   )
 }
 
