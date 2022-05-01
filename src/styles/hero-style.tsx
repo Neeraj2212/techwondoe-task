@@ -51,13 +51,6 @@ const HeroStyles = styled("div")({
     fontWeight: "300",
   },
 
-  ".text-gradient": {
-    background: "linear-gradient(45deg, #F9D423, #FF4E50)",
-    backgroundClip: "text",
-    color: "transparent",
-    WebkitBackgroundClip: "text",
-  },
-
   ".button-flex": {
     display: "flex",
     justifyContent: "center",

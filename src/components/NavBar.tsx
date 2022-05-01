@@ -19,11 +19,6 @@ export default function NavBar() {
     setClose(!close)
   }
 
-  // useEffect(() => {
-  //   const z = close ? "-1" : "1"
-  //   NavigationBar.current?.style.setProperty("z-index", z)
-  // }, [close])
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" style={{ position: "relative", zIndex: 50 }}>
