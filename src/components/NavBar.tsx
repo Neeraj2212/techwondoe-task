@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useRef, useState, useEffect } from "react"
 import AppBar from "@mui/material/AppBar"
 import Box from "@mui/material/Box"
 import Toolbar from "@mui/material/Toolbar"
@@ -14,10 +14,19 @@ import {
 export default function NavBar() {
   const { companyLogo } = useContext(CompanyContext) as Company
   const [close, setClose] = useState(true)
-  const toggleMenu = () => setClose(!close)
+  const NavigationBar = useRef<HTMLDivElement>(null)
+  const toggleMenu = () => {
+    setClose(!close)
+  }
+
+  // useEffect(() => {
+  //   const z = close ? "-1" : "1"
+  //   NavigationBar.current?.style.setProperty("z-index", z)
+  // }, [close])
+
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ position: "relative", zIndex: 50 }}>
+      <AppBar position="fixed" style={{ position: "relative", zIndex: 50 }}>
         <Toolbar style={{ padding: "10px 2% 10px 2%", minHeight: "90px" }}>
           <MenuPart onClick={toggleMenu}>
             <Hamburger>
@@ -41,13 +50,7 @@ export default function NavBar() {
         </Toolbar>
       </AppBar>
 
-      <Navigation
-        show={!close}
-        style={{
-          transition: "all 0.5s ease-in-out",
-          opacity: close ? 0 : 1,
-        }}
-      >
+      <Navigation show={!close} ref={NavigationBar}>
         <nav className={`nav nav-${!close}`}>
           <div className="nav-link">Home</div>
           <div className="nav-link">About</div>

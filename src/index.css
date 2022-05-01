@@ -285,6 +285,10 @@ body {
   font-weight: 500;
 }
 
+a{
+  text-decoration: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

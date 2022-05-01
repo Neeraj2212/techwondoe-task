@@ -10,6 +10,10 @@ export const MenuPart = styled("div")({
   alignItems: "center",
   order: "-1",
   cursor: "pointer",
+
+  " @media screen and (max-width: 767px)": {
+    left: "5%",
+  },
 })
 
 export const Hamburger = styled("div")({
@@ -114,6 +118,12 @@ export const MenuTextWrapper = styled("div")({
       "translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg)",
     transformStyle: "preserve-3d",
   },
+
+  " @media screen and (max-width: 767px)": {
+    ".menu-text , .close-text": {
+      display: "none",
+    },
+  },
 })
 
 export const Navigation = styled("div")(({ show }: { show: boolean }) => ({
@@ -122,7 +132,6 @@ export const Navigation = styled("div")(({ show }: { show: boolean }) => ({
   right: "0",
   top: "0",
   bottom: "0",
-  zIndex: show ? "1" : "-1",
   display: "flex",
   backgroundColor: "#111",
   justifyContent: "center",
@@ -130,6 +139,10 @@ export const Navigation = styled("div")(({ show }: { show: boolean }) => ({
   paddingRight: "5%",
   paddingLeft: "5%",
   height: "100vh",
+  transition: "all 0.5s ease-in-out",
+  opacity: show ? 1 : 0,
+  zIndex: "1",
+  visibility: show ? "visible" : "hidden",
 
   ".nav": {
     // display: "none",
@@ -171,5 +184,12 @@ export const Navigation = styled("div")(({ show }: { show: boolean }) => ({
     backgroundImage: "linear-gradient(45deg, #F9D423, #FF4E50)",
     color: "transparent",
     backgroundClip: "text",
+  },
+
+  " @media screen and (max-width: 991px)": {
+    ".nav > .nav-link": {
+      fontSize: "40px",
+      lineHeight: "48px",
+    },
   },
 }))
