@@ -3,7 +3,8 @@ import { Asset, EntryFields, Entry } from 'contentful';
 export interface Blog {
   titleImage: Asset;
   title: string;
-  publishedDate: Date;
+  tag:string,
+  publishedDate: EntryFields.Date;
   description: EntryFields.RichText;
 }
 
@@ -27,7 +28,7 @@ export interface Company  {
       properties: string[];
     }
   ];
-  Blogs: Entry<Blog>[];
+  blogs: Entry<Blog>[];
   testimonials: Entry<Testimonial>[];
   clients: Asset[];
 } 

@@ -49,8 +49,8 @@ function ContactComponent() {
         </h3>
 
         <Grid container spacing={5}>
-          <Grid item sm={4} sx={{ display: { xs: "none", sm: "block" } }} />
-          <Grid item xs={12} sm={4}>
+          <Grid item sm={4} sx={{ display: { xs: "none", lg: "block" } }} />
+          <Grid item xs={12} md={6} lg={4}>
             <div>
               <label htmlFor="Name-2" className="field-label-form">
                 Name
@@ -91,7 +91,7 @@ function ContactComponent() {
               />
             </div>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <div className="div-block">
               <div className="checkbox-container">
                 <label htmlFor="Text-Area-3" className="field-label-form">

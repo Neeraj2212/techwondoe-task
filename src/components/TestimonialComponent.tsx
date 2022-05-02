@@ -11,8 +11,6 @@ function TestimonialComponent() {
 
   useEffect(() => {
     if (allSlides.current) {
-      console.log(allSlides.current)
-
       allSlides.current.style.transform = `translateX(-${currentIndex * 100}%)`
     }
   }, [currentIndex])
