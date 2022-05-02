@@ -6,6 +6,7 @@ import HeroComponent from "./HeroComponent"
 import ServicesComponent from "./ServicesComponent"
 import ClientsComponent from "./ClientsComponent"
 import WhyUsComponent from "./WhyUsComponent"
+import TestimonialComponent from "./TestimonialComponent"
 
 function MainComponent() {
   const company = useContext(CompanyContext) as Company
@@ -16,6 +17,7 @@ function MainComponent() {
       <ServicesComponent />
       <ClientsComponent />
       <WhyUsComponent />
+      <TestimonialComponent />
     </div>
   )
 }
