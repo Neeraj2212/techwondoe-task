@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/techwondoe-task/static/css/main.4398be65.css",
+    "main.js": "/techwondoe-task/static/js/main.9444950e.js",
+    "index.html": "/techwondoe-task/index.html",
+    "main.4398be65.css.map": "/techwondoe-task/static/css/main.4398be65.css.map",
+    "main.9444950e.js.map": "/techwondoe-task/static/js/main.9444950e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4398be65.css",
+    "static/js/main.9444950e.js"
+  ]
+}
