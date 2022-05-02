@@ -21,7 +21,10 @@ export default function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" style={{ position: "relative", zIndex: 50 }}>
+      <AppBar
+        position="fixed"
+        style={{ position: "relative", zIndex: 50, boxShadow: "none" }}
+      >
         <Toolbar style={{ padding: "10px 2% 10px 2%", minHeight: "90px" }}>
           <MenuPart onClick={toggleMenu}>
             <Hamburger>

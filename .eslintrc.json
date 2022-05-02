@@ -29,6 +29,12 @@
     "react/jsx-filename-extension": [
       2,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "assert": "either" // either check for `htmlFor` or `nesting`
+      }
     ]
   },
   "settings": {
