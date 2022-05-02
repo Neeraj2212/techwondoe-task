@@ -1,15 +1,15 @@
-import React, { useContext, useRef, useState, useEffect } from "react"
 import AppBar from "@mui/material/AppBar"
 import Box from "@mui/material/Box"
 import Toolbar from "@mui/material/Toolbar"
 import CompanyContext from "context"
-import { Company } from "types"
+import React, { useContext, useRef, useState } from "react"
 import {
   Hamburger,
   MenuPart,
   MenuTextWrapper,
   Navigation,
 } from "styles/navbar-style"
+import { Company } from "types"
 
 export default function NavBar() {
   const { companyLogo } = useContext(CompanyContext) as Company

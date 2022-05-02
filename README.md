@@ -2,6 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Run on local
+
+To create a local environment run this command in your terminal
+
+```bash
+git clone https://github.com/Neeraj2212/techwondoe-task.git
+cd techwondoe-task # cd into folder
+npm install # install dependencies
+```
+
+After these steps update create an `.env.local` file and update it according to `.env.example`
+
+then run `npm start` to start the local server
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:

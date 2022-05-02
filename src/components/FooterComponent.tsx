@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useRef, useState } from "react"
-import CompanyContext from "context"
-import { Company } from "types"
 import { Grid } from "@mui/material"
+import CompanyContext from "context"
+import React, { useContext } from "react"
 import FooterStyles from "styles/footer-style"
+import { Company } from "types"
 
 function FooterComponent() {
   const { companyLogo } = useContext(CompanyContext) as Company

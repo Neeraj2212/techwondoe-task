@@ -1,6 +1,4 @@
-import React, { useContext } from "react"
-import CompanyContext from "context"
-import { Company } from "types"
+import React from "react"
 import HeroStyle from "styles/hero-style"
 
 function HeroComponent() {

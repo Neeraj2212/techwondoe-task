@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react"
-import { createClient } from "contentful"
 import { ThemeProvider } from "@mui/material/styles"
-import theme from "./theme"
+import { createClient } from "contentful"
+import React, { useEffect, useState } from "react"
 import MainComponent from "./components/MainComponent"
-import { Blog, Company, ContextObject, Testimonial } from "./types"
 import CompanyContext from "./context"
+import theme from "./theme"
+import { Company, ContextObject } from "./types"
 
 function App() {
   const [company, setCompany] = useState<ContextObject>({})

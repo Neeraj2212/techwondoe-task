@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useRef, useState } from "react"
-import CompanyContext from "context"
-import { Company } from "types"
 import { Grid } from "@mui/material"
+import CompanyContext from "context"
+import React, { useContext, useState } from "react"
 import ContactStyles from "styles/contact-styles"
+import { Company } from "types"
 
 function CustomCheckbox({ domain }: { domain: string }) {
   const [isChecked, setIsChecked] = useState(false)
