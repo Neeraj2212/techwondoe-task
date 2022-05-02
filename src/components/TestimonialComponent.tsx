@@ -73,17 +73,24 @@ function TestimonialComponent() {
                   flex: " 0 0 100%",
                 }}
               >
-                <Grid sm={3}>
+                <Grid
+                  xs={12}
+                  md={3}
+                  sx={{
+                    display: { xs: "flex" },
+                    justifyContent: { xs: "center" },
+                  }}
+                >
                   <img
                     src={testimonial.fields.avatar.fields.file.url}
                     alt={testimonial.fields.name}
                     className="testimonial-photo"
                   />
                 </Grid>
-                <Grid sm={9}>
+                <Grid md={9} className="about-aut">
                   <div className="testimonials-name text-align-centre-mobile">
                     <br />
-                    {testimonial.fields.name} , {testimonial.fields.designation}
+                    {testimonial.fields.name}, {testimonial.fields.designation}
                   </div>
                   <div className="testimonials-company text-align-centre-mobile">
                     {testimonial.fields.companyName}
@@ -92,9 +99,11 @@ function TestimonialComponent() {
                     {text}
                   </div>
 
-                  <a href="/" className="button w-button">
-                    view case study
-                  </a>
+                  <div>
+                    <a href="/" className="button w-button">
+                      view case study
+                    </a>
+                  </div>
                 </Grid>
               </Grid>
             )

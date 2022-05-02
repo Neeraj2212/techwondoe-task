@@ -38,7 +38,9 @@ const TestimonialStyles = styled("div")({
     color: "#f7f7f7",
     fontSize: "26px",
     fontWeight: "400",
+    lineHeight: "30px",
     textAlign: "left",
+    paddingTop: "20px",
   },
 
   ".testimonials-company": {
@@ -115,6 +117,25 @@ const TestimonialStyles = styled("div")({
     fontSize: "9px",
     display: "flex",
     justifyContent: "center",
+  },
+
+  "@media screen and (max-width: 991px) ": {
+    ".testimonial-photo": {
+      marginRight: "0",
+    },
+
+    ".about-aut > *": {
+      textAlign: "center",
+    },
+
+    ".testimonials-text": {
+      fontSize: "20px",
+    },
+
+    ".slide-nav": {
+      left: "50%",
+      marginLeft: "-70px",
+    },
   },
 })
 
