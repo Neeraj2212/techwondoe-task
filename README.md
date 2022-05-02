@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Non Functional Requirements
+- [x] Each section of the homepage must be a separate react component ( ref. src/components folder).
+- [x] No hardcoding of text in react app. All the content Coming from Contentful.
+- [x] Prettier and Linter configuration (prettier with eslint-airbnb-typescript is used)
+- [x] Readme file on how to deploy and run the service.
+
 
 ## Run on local
 
